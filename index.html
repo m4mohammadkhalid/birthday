@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+    canvas {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+      .balloon {
+        width: 738px;
+        margin: 0 auto;
+        padding-top: 30px;
+        position: relative;
+      }
+      .balloon > div {
+        width: 104px;
+        height: 140px;
+        background: rgba(182, 15, 97, 0.9);
+        border-radius: 0;
+        border-radius: 80% 80% 80% 80%;
+        margin: 0 auto;
+        position: absolute;
+        padding: 10px;
+        box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
+        -webkit-transform-origin: bottom center;
+      }
+      .balloon > div:nth-child(1) {
+        background: rgba(182, 15, 97, 0.9);
+        left: 0;
+        box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+        -webkit-animation: balloon1 6s ease-in-out infinite;
+        -moz-animation: balloon1 6s ease-in-out infinite;
+        -o-animation: balloon1 6s ease-in-out infinite;
+        animation: balloon1 6s ease-in-out infinite;
+      }
+      .balloon > div:nth-child(1):before {
+        color: rgba(182, 15, 97, 0.9);
+      }
+      .balloon > div:nth-child(2) {
+        background: rgba(242, 112, 45, 0.9);
+        left: 120px;
+        box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
+        -webkit-animation: balloon2 6s ease-in-out infinite;
+        -moz-animation: balloon2 6s ease-in-out infinite;
+        -o-animation: balloon2 6s ease-in-out infinite;
+        animation: balloon2 6s ease-in-out infinite;
+      }
+      .balloon > div:nth-child(2):before {
+        color: rgba(242, 112, 45, 0.9);
+      }
+      .balloon > div:nth-child(3) {
+        background: rgba(45, 181, 167, 0.9);
+        left: 240px;
+        box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+        -webkit-animation: balloon4 6s ease-in-out infinite;
+        -moz-animation: balloon4 6s ease-in-out infinite;
+        -o-animation: balloon4 6s ease-in-out infinite;
+        animation: balloon4 6s ease-in-out infinite;
+      }
+      .balloon > div:nth-child(3):before {
+        color: rgba(45, 181, 167, 0.9);
+      }
+      .balloon > div:nth-child(4) {
+        background: rgba(190, 61, 244, 0.9);
+        left: 360px;
+        box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
+        -webkit-animation: balloon1 5s ease-in-out infinite;
+        -moz-animation: balloon1 5s ease-in-out infinite;
+        -o-animation: balloon1 5s ease-in-out infinite;
+        animation: balloon1 5s ease-in-out infinite;
+      }
+      .balloon > div:nth-child(4):before {
+        color: rgba(190, 61, 244, 0.9);
+      }
+      .balloon > div:nth-child(5) {
+        background: rgba(180, 224, 67, 0.9);
+        left: 480px;
+        box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+        -webkit-animation: balloon3 5s ease-in-out infinite;
+        -moz-animation: balloon3 5s ease-in-out infinite;
+        -o-animation: balloon3 5s ease-in-out infinite;
+        animation: balloon3 5s ease-in-out infinite;
+      }
+      .balloon > div:nth-child(5):before {
+        color: rgba(180, 224, 67, 0.9);
+      }
+      .balloon > div:nth-child(6) {
+        background: rgba(242, 194, 58, 0.9);
+        left: 600px;
+        box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
+        -webkit-animation: balloon2 3s ease-in-out infinite;
+        -moz-animation: balloon2 3s ease-in-out infinite;
+        -o-animation: balloon2 3s ease-in-out infinite;
+        animation: balloon2 3s ease-in-out infinite;
+      }
+      .balloon > div:nth-child(6):before {
+        color: rgba(242, 194, 58, 0.9);
+      }
+      .balloon > div:before {
+        color: rgba(182, 15, 97, 0.9);
+        position: absolute;
+        bottom: -11px;
+        left: 52px;
+        content: "▲";
+        font-size: 1em;
+      }
+      span {
+        font-size: 4.8em;
+        color: white;
+        position: relative;
+        top: 30px;
+        left: 50%;
+        margin-left: -27px;
+      }
+      /*BALLOON 1 4*/
+      @-webkit-keyframes balloon1 {
+        0%,
+        100% {
+          -webkit-transform: translateY(0) rotate(-6deg);
+        }
+        50% {
+          -webkit-transform: translateY(-20px) rotate(8deg);
+        }
+      }
+      @-moz-keyframes balloon1 {
+        0%,
+        100% {
+          -moz-transform: translateY(0) rotate(-6deg);
+        }
+        50% {
+          -moz-transform: translateY(-20px) rotate(8deg);
+        }
+      }
+      @-o-keyframes balloon1 {
+        0%,
+        100% {
+          -o-transform: translateY(0) rotate(-6deg);
+        }
+        50% {
+          -o-transform: translateY(-20px) rotate(8deg);
+        }
+      }
+      @keyframes balloon1 {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-6deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(8deg);
+        }
+      }
+      /* BAllOON 2 5*/
+      @-webkit-keyframes balloon2 {
+        0%,
+        100% {
+          -webkit-transform: translateY(0) rotate(6eg);
+        }
+        50% {
+          -webkit-transform: translateY(-30px) rotate(-8deg);
+        }
+      }
+      @-moz-keyframes balloon2 {
+        0%,
+        100% {
+          -moz-transform: translateY(0) rotate(6deg);
+        }
+        50% {
+          -moz-transform: translateY(-30px) rotate(-8deg);
+        }
+      }
+      @-o-keyframes balloon2 {
+        0%,
+        100% {
+          -o-transform: translateY(0) rotate(6deg);
+        }
+        50% {
+          -o-transform: translateY(-30px) rotate(-8deg);
+        }
+      }
+      @keyframes balloon2 {
+        0%,
+        100% {
+          transform: translateY(0) rotate(6deg);
+        }
+        50% {
+          transform: translateY(-30px) rotate(-8deg);
+        }
+      }
+      /* BAllOON 0*/
+      @-webkit-keyframes balloon3 {
+        0%,
+        100% {
+          -webkit-transform: translate(0, -10px) rotate(6eg);
+        }
+        50% {
+          -webkit-transform: translate(-20px, 30px) rotate(-8deg);
+        }
+      }
+      @-moz-keyframes balloon3 {
+        0%,
+        100% {
+          -moz-transform: translate(0, -10px) rotate(6eg);
+        }
+        50% {
+          -moz-transform: translate(-20px, 30px) rotate(-8deg);
+        }
+      }
+      @-o-keyframes balloon3 {
+        0%,
+        100% {
+          -o-transform: translate(0, -10px) rotate(6eg);
+        }
+        50% {
+          -o-transform: translate(-20px, 30px) rotate(-8deg);
+        }
+      }
+      @keyframes balloon3 {
+        0%,
+        100% {
+          transform: translate(0, -10px) rotate(6eg);
+        }
+        50% {
+          transform: translate(-20px, 30px) rotate(-8deg);
+        }
+      }
+      /* BAllOON 3*/
+      @-webkit-keyframes balloon4 {
+        0%,
+        100% {
+          -webkit-transform: translate(10px, -10px) rotate(-8eg);
+        }
+        50% {
+          -webkit-transform: translate(-15px, 20px) rotate(10deg);
+        }
+      }
+      @-moz-keyframes balloon4 {
+        0%,
+        100% {
+          -moz-transform: translate(10px, -10px) rotate(-8eg);
+        }
+        50% {
+          -moz-transform: translate(-15px, 10px) rotate(10deg);
+        }
+      }
+      @-o-keyframes balloon4 {
+        0%,
+        100% {
+          -o-transform: translate(10px, -10px) rotate(-8eg);
+        }
+        50% {
+          -o-transform: translate(-15px, 10px) rotate(10deg);
+        }
+      }
+      @keyframes balloon4 {
+        0%,
+        100% {
+          transform: translate(10px, -10px) rotate(-8eg);
+        }
+        50% {
+          transform: translate(-15px, 10px) rotate(10deg);
+        }
+      }
+      h1 {
+        position: relative;
+        top: 200px;
+        text-align: center;
+        color: white;
+        font-size: 3.5em;
+      }
+    </style>
+    <script>
+      window.open = function () {};
+      window.print = function () {};
+      // Support hover state for mobile.
+      if (false) {
+        window.ontouchstart = function () {};
+      }
+    </script>
+<script>
+  setTimeout(function(){
+     window.location.href = 'birthday/index.html';
+  }, 9000);
+</script>
+  </head>
+  <body>
+    <div class="moon">
+      <div class="crater1"></div>
+      <div class="crater2"></div>
+      <div class="crater3"></div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="sea"></div>
+    <div id="beach"></div>
+    <img
+      src="https://dl.dropbox.com/s/2k0mtrxc2dqurmh/jumping.png"
+      alt="jumping-people"
+      id="people"
+    />
+    <img src="https://dl.dropbox.com/s/zoftkmdxyyqr8ce/belair.png" alt="jumping-people" id="car" />
+
+    <div id="merrywrap" class="merrywrap">
+      <div class="giftbox">
+        <div class="cover">
+          <div></div>
+        </div>
+        <div class="box"></div>
+      </div>
+      <div style="word-spacing: 20px; left: -60px; margin-top: 100px;" class="icons">
+        <div class="row">
+          <span>H</span>
+          <span>A</span>
+          <span>P</span>
+          <span>P</span>
+          <span>Y</span>
+        </div>
+        <div class="row">
+          <span>B</span>
+          <span>I</span>
+          <span>R</span>
+          <span>T</span>
+          <span>H</span>
+          <span>D</span>
+          <span>A</span>
+          <span>Y</span>
+        </div>
+        <div class="row">
+          <span>N</span>
+          <span>E</span>
+          <span>H</span>
+          <span>A</span>
+        </div>
+        
+      </div>
+<canvas id=c></canvas>
+      
+    </div>
+
+    <div class="container">
+        <div class="balloon">
+          <div><span>☺</span></div>
+          <div><span>N</span></div>
+          <div><span>E</span></div>
+          <div><span>H</span></div>
+          <div><span>A</span></div>
+          <div><span>!</span></div>
+          
+        </div>
+      </div>
+
+    <div id="video">
+      <!-- <iframe width="255" height="155" src="https://www.youtube.com/embed/KDxJlW6cxRk?controls=0&loop=1" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+
+ 
+
+    <!-- <div id="clab">
+      <div id="loader">
+        <div class="loading">
+          <span> LOADING...</span>
+        </div>
+      </div>
+    </div> -->
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+    <script>
+      window.requestAnimFrame = (function () {
+        return (
+          window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+          }
+        );
+      })();
+
+      // now we will setup our basic variables for the demo
+      var canvas = document.getElementById("canvas"),
+        ctx = canvas.getContext("2d"),
+        // full screen dimensions
+        cw = window.innerWidth,
+        ch = window.innerHeight,
+        // firework collection
+        fireworks = [],
+        // particle collection
+        particles = [],
+        // starting hue
+        hue = 120,
+        // when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+        limiterTotal = 5,
+        limiterTick = 0,
+        // this will time the auto launches of fireworks, one launch per 80 loop ticks
+        timerTotal = 80,
+        timerTick = 0,
+        mousedown = false,
+        // mouse x coordinate,
+        mx,
+        // mouse y coordinate
+        my;
+
+      // set canvas dimensions
+      canvas.width = cw;
+      canvas.height = ch;
+
+      // now we are going to setup our function placeholders for the entire demo
+
+      // get a random number within a range
+      function random(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      // calculate the distance between two points
+      function calculateDistance(p1x, p1y, p2x, p2y) {
+        var xDistance = p1x - p2x,
+          yDistance = p1y - p2y;
+        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+      }
+
+      // create firework
+      function Firework(sx, sy, tx, ty) {
+        // actual coordinates
+        this.x = sx;
+        this.y = sy;
+        // starting coordinates
+        this.sx = sx;
+        this.sy = sy;
+        // target coordinates
+        this.tx = tx;
+        this.ty = ty;
+        // distance from starting point to target
+        this.distanceToTarget = calculateDistance(sx, sy, tx, ty);
+        this.distanceTraveled = 0;
+        // track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+        this.coordinates = [];
+        this.coordinateCount = 3;
+        // populate initial coordinate collection with the current coordinates
+        while (this.coordinateCount--) {
+          this.coordinates.push([this.x, this.y]);
+        }
+        this.angle = Math.atan2(ty - sy, tx - sx);
+        this.speed = 2;
+        this.acceleration = 1.05;
+        this.brightness = random(50, 70);
+        // circle target indicator radius
+        this.targetRadius = 1;
+      }
+
+      // update firework
+      Firework.prototype.update = function (index) {
+        // remove last item in coordinates array
+        this.coordinates.pop();
+        // add current coordinates to the start of the array
+        this.coordinates.unshift([this.x, this.y]);
+
+        // cycle the circle target indicator radius
+        if (this.targetRadius < 8) {
+          this.targetRadius += 0.3;
+        } else {
+          this.targetRadius = 1;
+        }
+
+        // speed up the firework
+        this.speed *= this.acceleration;
+
+        // get the current velocities based on angle and speed
+        var vx = Math.cos(this.angle) * this.speed,
+          vy = Math.sin(this.angle) * this.speed;
+        // how far will the firework have traveled with velocities applied?
+        this.distanceTraveled = calculateDistance(
+          this.sx,
+          this.sy,
+          this.x + vx,
+          this.y + vy
+        );
+
+        // if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
+        if (this.distanceTraveled >= this.distanceToTarget) {
+          createParticles(this.tx, this.ty);
+          // remove the firework, use the index passed into the update function to determine which to remove
+          fireworks.splice(index, 1);
+        } else {
+          // target not reached, keep traveling
+          this.x += vx;
+          this.y += vy;
+        }
+      };
+
+      // draw firework
+      Firework.prototype.draw = function () {
+        ctx.beginPath();
+        // move to the last tracked coordinate in the set, then draw a line to the current x and y
+        ctx.moveTo(
+          this.coordinates[this.coordinates.length - 1][0],
+          this.coordinates[this.coordinates.length - 1][1]
+        );
+        ctx.lineTo(this.x, this.y);
+        ctx.strokeStyle = "hsl(" + hue + ", 100%, " + this.brightness + "%)";
+        ctx.stroke();
+
+        ctx.beginPath();
+        // draw the target for this firework with a pulsing circle
+        ctx.arc(this.tx, this.ty, this.targetRadius, 0, Math.PI * 2);
+        ctx.stroke();
+      };
+
+      // create particle
+      function Particle(x, y) {
+        this.x = x;
+        this.y = y;
+        // track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
+        this.coordinates = [];
+        this.coordinateCount = 5;
+        while (this.coordinateCount--) {
+          this.coordinates.push([this.x, this.y]);
+        }
+        // set a random angle in all possible directions, in radians
+        this.angle = random(0, Math.PI * 2);
+        this.speed = random(1, 10);
+        // friction will slow the particle down
+        this.friction = 0.95;
+        // gravity will be applied and pull the particle down
+        this.gravity = 1;
+        // set the hue to a random number +-20 of the overall hue variable
+        this.hue = random(hue - 20, hue + 20);
+        this.brightness = random(50, 80);
+        this.alpha = 1;
+        // set how fast the particle fades out
+        this.decay = random(0.015, 0.03);
+      }
+
+      // update particle
+      Particle.prototype.update = function (index) {
+        // remove last item in coordinates array
+        this.coordinates.pop();
+        // add current coordinates to the start of the array
+        this.coordinates.unshift([this.x, this.y]);
+        // slow down the particle
+        this.speed *= this.friction;
+        // apply velocity
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed + this.gravity;
+        // fade out the particle
+        this.alpha -= this.decay;
+
+        // remove the particle once the alpha is low enough, based on the passed in index
+        if (this.alpha <= this.decay) {
+          particles.splice(index, 1);
+        }
+      };
+
+      // draw particle
+      Particle.prototype.draw = function () {
+        ctx.beginPath();
+        // move to the last tracked coordinates in the set, then draw a line to the current x and y
+        ctx.moveTo(
+          this.coordinates[this.coordinates.length - 1][0],
+          this.coordinates[this.coordinates.length - 1][1]
+        );
+        ctx.lineTo(this.x, this.y);
+        ctx.strokeStyle =
+          "hsla(" +
+          this.hue +
+          ", 100%, " +
+          this.brightness +
+          "%, " +
+          this.alpha +
+          ")";
+        ctx.stroke();
+      };
+
+      // create particle group/explosion
+      function createParticles(x, y) {
+        // increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+        var particleCount = 30;
+        while (particleCount--) {
+          particles.push(new Particle(x, y));
+        }
+      }
+
+      // main demo loop
+      function loop() {
+        // this function will run endlessly with requestAnimationFrame
+        requestAnimFrame(loop);
+
+        // increase the hue to get different colored fireworks over time
+        hue += 0.5;
+
+        // normally, clearRect() would be used to clear the canvas
+        // we want to create a trailing effect though
+        // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+        ctx.globalCompositeOperation = "destination-out";
+        // decrease the alpha property to create more prominent trails
+        ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+        ctx.fillRect(0, 0, cw, ch);
+        // change the composite operation back to our main mode
+        // lighter creates bright highlight points as the fireworks and particles overlap each other
+        ctx.globalCompositeOperation = "lighter";
+
+        // loop over each firework, draw it, update it
+        var i = fireworks.length;
+        while (i--) {
+          fireworks[i].draw();
+          fireworks[i].update(i);
+        }
+
+        // loop over each particle, draw it, update it
+        var i = particles.length;
+        while (i--) {
+          particles[i].draw();
+          particles[i].update(i);
+        }
+
+        // launch fireworks automatically to random coordinates, when the mouse isn't down
+        if (timerTick >= timerTotal) {
+          if (!mousedown) {
+            // start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+            fireworks.push(
+              new Firework(cw / 2, ch, random(0, cw), random(0, ch / 2))
+            );
+            timerTick = 0;
+          }
+        } else {
+          timerTick++;
+        }
+
+        // limit the rate at which fireworks get launched when mouse is down
+        if (limiterTick >= limiterTotal) {
+          if (mousedown) {
+            // start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
+            fireworks.push(new Firework(cw / 2, ch, mx, my));
+            limiterTick = 0;
+          }
+        } else {
+          limiterTick++;
+        }
+      }
+
+      window.onload = function () {
+        var merrywrap = document.getElementById("merrywrap");
+        var box = merrywrap.getElementsByClassName("giftbox")[0];
+        var step = 1;
+        var stepMinutes = [2000, 2000, 1000, 1000];
+        function init() {
+          box.addEventListener("click", openBox, false);
+        }
+        function stepClass(step) {
+          merrywrap.className = "merrywrap";
+          merrywrap.className = "merrywrap step-" + step;
+        }
+        function openBox() {
+          if (step === 1) {
+            box.removeEventListener("click", openBox, false);
+          }
+          stepClass(step);
+          if (step === 3) {
+          }
+          if (step === 4) {
+            reveal();
+            return;
+          }
+          setTimeout(openBox, stepMinutes[step - 1]);
+          step++;
+        }
+
+        init();
+      };
+
+      function reveal() {
+        document.querySelector(".merrywrap").style.backgroundColor =
+          "transparent";
+
+        loop();
+
+        var w, h;
+        if (window.innerWidth >= 1000) {
+          w = 295;
+          h = 185;
+        } else {
+          w = 255;
+          h = 155;
+        }
+      }
+    </script>
+<script>
+  var w = c.width = window.innerWidth,
+    h = c.height = window.innerHeight,
+    ctx = c.getContext( '2d' ),
+    
+    fireworks = [],
+    tick = 0;
+
+
+ctx.fillStyle = '#111';
+ctx.fillRect( 0, 0, w, h );
+
+ctx.font = '60px Verdana';
+var text = '',
+    len = ctx.measureText( text ).width;
+
+function anim(){
+
+  window.requestAnimationFrame( anim );
+  
+  ++tick;
+  
+  if( fireworks.length < 50 && Math.random() < .1 )
+    fireworks.push( new Firework );
+  
+  ctx.fillStyle = 'rgba( 0, 0, 0, .04 )';
+  ctx.fillRect( 0, 0, w, h );
+  
+  ctx.fillStyle = 'hsl(0,0%,light%)'.replace( 'light', 50 + 20 * Math.sin( tick / 10 ) );
+  ctx.fillText( text, w / 2 - len / 2, h / 2 - 10 );
+  
+  fireworks.map( function( firework ) { firework.step(); } );
+}
+function Firework(){
+
+  this.reset();
+}
+Firework.prototype.reset = function(){
+  
+  this.dx = Math.random() * 300 * ( Math.random() < .5 ? 1 : -1 );
+
+  this.sx = Math.random() * w;
+  this.ex = this.sx + this.dx;
+  this.ey = Math.random() * h;
+  
+  this.px = this.sx;
+  this.py = 0;
+  
+  this.time = ( 30 + 30 * Math.random() ) |0;
+  this.tick = 0;
+  
+  this.size = ( 2 + 2 * Math.random() ) |0;
+  this.shatters = ( 5 + 5 * Math.random() ) |0;
+  this.radiant = Math.PI * 2 / this.shatters;
+  
+  this.shatterContainer = [];
+  this.dead = false;
+}
+Firework.prototype.step = function(){
+  
+  if( !this.dead ){
+    ++this.tick;
+    var prop = this.tick / this.time,
+        nx = this.sx + this.dx * ( 1 + Math.sin( -Math.PI / 2 + prop * Math.PI / 2 ) ),
+        ny = prop * this.ey;
+
+    ctx.strokeStyle = 'hsl(hue,80%,50%)'.replace( 'hue', tick / 3 + nx / w * 100 );
+    ctx.lineWidth = this.size;
+    ctx.beginPath();
+    ctx.moveTo( this.px, h - this.py );
+    ctx.lineTo( nx, h - ny );
+    ctx.stroke();
+
+    this.px = nx;
+    this.py = ny;
+
+    if( prop >= 1 ){
+      
+      this.dead = true;
+
+      for( var i = 0; i < this.shatters; ++i )
+        this.shatterContainer.push( new Shatter( nx, ny, this.radiant * i ) );
+    }
+
+    if( this.x < 0 || this.x > w )
+      this.reset();
+    
+  } else {
+  
+    for( var i = 0; i < this.shatterContainer.length; ++i ) {
+    
+      var shatter = this.shatterContainer[ i ];
+      
+      shatter.step();
+      
+      if( shatter.x < 0 || shatter.y > w || shatter.y > h ){
+      
+        this.shatterContainer.splice( i, 1 );
+        --i;
+      }
+    }
+    
+    if( this.shatterContainer.length === 0 )
+      this.reset();
+  }
+}
+function Shatter( x, y, rad ){
+
+  this.x = x;
+  this.y = h - y;
+  this.vx = ( Math.random() + 1 ) * Math.cos( rad );
+  this.vy = ( Math.random() + 1 ) * Math.sin( rad );
+}
+Shatter.prototype.step = function(){
+
+  var nx = this.x + ( this.vx *= .999 ),
+      ny = this.y + ( this.vy += .02 );
+  
+  ctx.strokeStyle = 'hsl(hue,80%,50%)'.replace( 'hue', tick / 3 + nx / w * 100 );
+  ctx.lineWidth = .5 + Math.random();
+  ctx.beginPath();
+  ctx.moveTo( this.x, this.y );
+  ctx.lineTo( nx, ny );
+  ctx.stroke();
+  
+  this.x = nx;
+  this.y = ny;
+}
+
+anim();
+</script>
+  </body>
+</html>

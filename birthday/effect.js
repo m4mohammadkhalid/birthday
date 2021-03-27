@@ -138,6 +138,12 @@ $('document').ready(function(){
 		});
 	});
 
+	$('#cake_fadeinn').click(function(){
+		
+		$(this).fadeOut('slow').delay(3000).promise().done(function(){
+			$('#story').fadeIn('slow');
+		});
+	});
 		
 	$('#wish_message').click(function(){
 		 vw = $(window).width()/2;
@@ -178,7 +184,7 @@ $('document').ready(function(){
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
+					$('#cake_fadeinn').fadeIn('fast');
 				});
 				
 			}
